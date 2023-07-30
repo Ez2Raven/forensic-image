@@ -1,0 +1,15 @@
+version: '3'
+services:
+  kali-service:
+  build: 
+    context: .
+    dockerfile: Dockerfile
+  container_name: ${CONTAINER_NAME:-lmm-website}
+  networks:
+    - kali_network
+
+volumes:
+  - ./workspace:/workspace
+
+networks:
+  
